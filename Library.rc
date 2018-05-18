@@ -1,0 +1,30 @@
+#include "PodHacks.h"
+
+LANGUAGE 0x0000, 0x0000
+
+1 VERSIONINFO
+ FILEVERSION    PODHACKS_VER_MAJOR, PODHACKS_VER_MINOR, PODHACKS_VER_PATCH, 0
+ PRODUCTVERSION 2, 2, 9, 0
+ FILEOS         0x00000004
+ FILETYPE       0x00000002
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "000004b0"
+    BEGIN
+      VALUE "CompanyName",      "Nico Bendlin"
+      VALUE "FileDescription",  "Planet of Death - Hook Library"
+      VALUE "FileVersion",      PODHACKS_VER_STRING
+      VALUE "InternalName",     "PodHacks"
+      VALUE "LegalCopyright",   "(c) 2014 Nico Bendlin <nicode@gmx.net>"
+      VALUE "OriginalFilename", "PodHacks.dll"
+      VALUE "ProductName",      "POD"
+      VALUE "ProductVersion",   "2.2.9.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0000 0x04B0
+  END
+END
+

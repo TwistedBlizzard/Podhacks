@@ -1,0 +1,157 @@
+#include "PodHacks.h"
+
+LANGUAGE 0x0000, 0x0000
+
+1 CURSOR "Install.cur"
+
+2 ICON "Install.ico"
+
+1 DIALOGEX 0, 0, 160, 70
+ STYLE   0x80C808D8
+ EXSTYLE 0x00040000
+ CAPTION "Planet of Death - Hooks"
+ FONT    8, "MS Shell Dlg", 400, 0, 1
+BEGIN
+  CONTROL "",
+    1001, "SysListView32", 0x5003481D,
+    0, 0, 160, 46
+  CONTROL "&Settings",
+    1002, BUTTON, 0x50010000,
+    5, 50, 50, 15
+  CONTROL "E&xit",
+    1003, BUTTON, 0x50010001,
+    105, 50, 50, 15
+END
+
+2 DIALOGEX 0, 0, 200, 279
+ STYLE   0x80C80098
+ EXSTYLE 0x00000080
+ CAPTION "Settings"
+ FONT    8, "MS Shell Dlg", 400, 0, 1
+BEGIN
+  CONTROL "POD Hooks",
+    -1, BUTTON, 0x50000007,
+    7, 7, 186, 26
+  CONTROL "&Verify that the application is POD (recommended)",
+    1001, BUTTON, 0x50010003,
+    11, 18, 177, 10
+  CONTROL "Planet of Death",
+    -1, BUTTON, 0x50000007,
+    7, 34, 186, 190
+  CONTROL "Override C&PU detections for modern computers",
+    1002, BUTTON, 0x50010003,
+    11, 45, 177, 10
+  CONTROL "Fool POD that the &Desktop color depth is 16-bit",
+    1003, BUTTON, 0x50010003,
+    11, 58, 177, 10
+  CONTROL "Prohibit confining the &Cursor to the window area",
+    1004, BUTTON, 0x50010003,
+    11, 71, 177, 10
+  CONTROL "Redirect CD &File access to application directory",
+    1005, BUTTON, 0x50010006,
+    11, 84, 177, 10
+  CONTROL "CD &Label:",
+    -1, STATIC, 0x50020202,
+    11, 98, 36, 12
+  CONTROL "POD2_0",
+    1006, COMBOBOX, 0x50212142,
+    51, 98, 134, 12
+  CONTROL "Redirect CD &Audio to Track02.wav/Track02.mp3",
+    1007, BUTTON, 0x50010006,
+    11, 114, 177, 10
+  CONTROL "Wave-&out:",
+    -1, STATIC, 0x50020202,
+    11, 127, 36, 12
+  CONTROL "",
+    1008, COMBOBOX, 0x50210003,
+    51, 127, 134, 12
+  CONTROL "Redirect &Windows directory (local .\\UbiSoft\\Ubi.ini)",
+    1009, BUTTON, 0x50010006,
+    11, 143, 177, 10
+  CONTROL "Suppress &resolution changes (grSstWinOpen error)",
+    1010, BUTTON, 0x50010006,
+    11, 156, 177, 10
+  CONTROL "Enable Reverse &Mode by default (Ubi.ini 'Tonneau')",
+    1011, BUTTON, 0x50010003,
+    11, 169, 177, 10
+  CONTROL "L&imit DirectDraw to about 60 surface flips/second",
+    1012, BUTTON, 0x50010003,
+    11, 182, 177, 10
+  CONTROL "Fake DirectDraw display mode &enumeration",
+    1013, BUTTON, 0x50010003,
+    11, 195, 177, 10
+  CONTROL "S&kip global display lock in the sound engine thread",
+    1014, BUTTON, 0x50010003,
+    11, 208, 177, 10
+  CONTROL "Good Old Games",
+    -1, BUTTON, 0x50000007,
+    7, 228, 186, 26
+  CONTROL "Override &Glide wrapper resolution to 800x600",
+    1015, BUTTON, 0x50010006,
+    11, 239, 177, 10
+  CONTROL "Defa&ults",
+    1016, BUTTON, 0x50010000,
+    7, 258, 42, 14
+  CONTROL "<a href=""http://svn.nicode.net/podhacks/bin/"">svn.nicode.net/podhacks</a>",
+    1017, "SysLink", 0x50010000,
+    60, 260, 92, 12
+  CONTROL "&Save",
+    1018, BUTTON, 0x50010001,
+    151, 258, 42, 14
+END
+
+3 DIALOGEX 0, 0, 150, 17
+ STYLE   0x80C80098
+ EXSTYLE 0x08000000
+ CAPTION "POD Music"
+ FONT    8, "MS Shell Dlg", 400, 0, 1
+BEGIN
+  CONTROL "What shall we do with a drunken sailor, ...",
+    -1, STATIC, 0x58020000,
+    5, 5, 140, 12
+END
+
+STRINGTABLE
+BEGIN
+  1 "No POD binaries found in the current directory."
+  2 "Failed to open the POD binary for write access."
+  3 "Failed to apply the changes to the POD binary."
+  4 "Failed to save the POD Hook Library to disk."
+  5 "Error while writing the settings."
+END
+
+STRINGTABLE
+BEGIN
+  16 "[PodHacks Music Player]"
+END
+
+1 RCDATA "bin\PodHacks.dll"
+
+1 VERSIONINFO
+ FILEVERSION    PODHACKS_VER_MAJOR, PODHACKS_VER_MINOR, PODHACKS_VER_PATCH, 0
+ PRODUCTVERSION 2, 2, 9, 0
+ FILEOS         0x00000004
+ FILETYPE       0x00000001
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "000004b0"
+    BEGIN
+      VALUE "CompanyName",      "Nico Bendlin"
+      VALUE "FileDescription",  "Planet of Death - Hook Install"
+      VALUE "FileVersion",      PODHACKS_VER_STRING
+      VALUE "InternalName",     "PodHacks"
+      VALUE "LegalCopyright",   "(c) 2014 Nico Bendlin <nicode@gmx.net>"
+      VALUE "OriginalFilename", "PodHacks.exe"
+      VALUE "ProductName",      "POD"
+      VALUE "ProductVersion",   "2.2.9.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0000 0x04B0
+  END
+END
+
+1 24 "Install.man"
+

@@ -1,0 +1,21 @@
+LIBRARY "PodHacks"
+EXPORTS
+  AVIFileExit            = AVIFIL32.AVIFileExit
+  AVIFileGetStream       = AVIFIL32.AVIFileGetStream
+  AVIFileInfoA           = AVIFIL32.AVIFileInfoA
+  AVIFileInit            = AVIFIL32.AVIFileInit
+  AVIFileOpenA           = AVIFIL32_AVIFileOpenA  ; Data\Binary\Video\IntroCD.avi
+  AVIFileRelease         = AVIFIL32.AVIFileRelease
+  AVIStreamGetFrameClose = AVIFIL32.AVIStreamGetFrameClose
+  AVIStreamGetFrameOpen  = AVIFIL32.AVIStreamGetFrameOpen
+  AVIStreamGetFrame      = AVIFIL32.AVIStreamGetFrame
+  AVIStreamInfoA         = AVIFIL32.AVIStreamInfoA
+  AVIStreamLength        = AVIFIL32.AVIStreamLength
+  AVIStreamOpenFromFileA = AVIFIL32.AVIStreamOpenFromFileA
+  AVIStreamReadFormat    = AVIFIL32.AVIStreamReadFormat
+  AVIStreamRead          = AVIFIL32.AVIStreamRead
+  AVIStreamRelease       = AVIFIL32.AVIStreamRelease
+  AVIStreamSampleToTime  = AVIFIL32.AVIStreamSampleToTime
+  AVIStreamStart         = AVIFIL32.AVIStreamStart
+  AVIStreamTimeToSample  = AVIFIL32.AVIStreamTimeToSample
+  DllGetVersion          = PODHACKS_DllGetVersion
